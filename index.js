@@ -13,7 +13,7 @@ module.exports = {
   },
 
   dynamicScript: function(request) {
-    var liveReloadPort = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT;
+    var liveReloadPort = +process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT + 100;
 
     return "(function() {\n " +
            "var src = (location.protocol || 'http:') + '//' + (location.hostname || 'localhost') + ':" + liveReloadPort + "/livereload.js?snipver=1';\n " +
